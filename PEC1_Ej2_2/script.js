@@ -28,9 +28,10 @@ function calculate() {
     .catch((e) => {
       error.classList.add("visible");
       error.textContent = e;
+    })
+    .finally(() => {
+      loading.classList.remove("visible");
     });
-
-  loading.classList.remove("visible");
 }
 
 currencyEl_one.addEventListener("change", calculate);

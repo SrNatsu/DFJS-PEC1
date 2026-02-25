@@ -69,7 +69,7 @@ function checkAge(input) {
 
 function checkPassword(input) {
   const re =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?,.])[A-Za-z\d~`!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?,.]{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?,.])[A-Za-z\d~`!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?,.]{8,25}$/;
 
   return re.test(input.value)
     ? showSuccess(input)
@@ -85,4 +85,5 @@ form.addEventListener("submit", (e) => {
   checkEmail(email);
   checkAge(age);
   checkPassword(password);
+  checkPasswordsMatch(password, password2);
 });

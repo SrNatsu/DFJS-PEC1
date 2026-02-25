@@ -16,6 +16,7 @@ function calculate(selectedSeatsCount) {
   for (let cs of currencySymbols) {
     cs.textContent = currencySelect.value;
   }
+
   const currency_one = currencySelect.value;
   const currency_two = "USD";
 
@@ -25,9 +26,13 @@ function calculate(selectedSeatsCount) {
       const rate = data.rates[currency_two];
       ticketPrice = (movieSelect.value / rate).toFixed(2);
 
-      for (let idx in values) {
-        amounts[idx].textContent = (values[idx].value / rate).toFixed(2);
-      }
+      Array.from(movieSelect.options).forEach((option) => {
+        const basePrice = option.value;
+        const convertedPrice = (basePrice / rate).toFixed(2);
+        const title = option.getAttribute("data-title");
+
+        option.textContent = `${title} (${convertedPrice} ${currency_one})`;
+      });
 
       total.textContent = (selectedSeatsCount * ticketPrice).toFixed(2);
     });
