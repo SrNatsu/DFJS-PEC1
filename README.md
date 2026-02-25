@@ -2,6 +2,12 @@
 
 Esta entrega contiene la resolución de la **PEC 1** de la asignatura **Desarrollo Front-end con Frameworks JavaScript** de la UOC. El objetivo principal es asentar las bases del desarrollo web moderno (HTML5, CSS3 y JavaScript ES6+) y configurar un entorno de trabajo profesional.
 
+## 🚀 Despliegue
+Puedes ver y probar los ejercicios funcionando en los siguientes enlaces:
+* [Validador de formularios](https://srnatsu.github.io/DFJS-PEC1/PEC1_Ej2_1/)
+* [Calculadora de cambio de divisa](https://srnatsu.github.io/DFJS-PEC1/PEC1_Ej2_2/)
+* [Reserva de asientos de cine](https://srnatsu.github.io/DFJS-PEC1/PEC1_Ej2_3/)
+
 ## 📂 Estructura del repositorio
 
 El proyecto sigue estrictamente la estructura de carpetas solicitada en el enunciado:
